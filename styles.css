@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #00a822;
+}
+
+.container{
+    width: 605px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px 30px 25px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 600px;
+}
+
+.quote_container{
+    margin: 2.3rem 0;
+}
+
+.quote_content i{
+    font-size: 0.9rem;
+}
+
+.quote_content i:first-child{
+    margin: 3px 10px 0 0;
+}
+
+.quote_content i:last-child{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+
+.quote_content{
+    display: flex;
+    justify-content: center;
+}
+
+.quote{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.author_container{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.author_container span:first-child{
+    margin: -5px 5px 0 0;
+    font-size: 1.7rem;
+    font-family: monospace;
+}
+
+.buttons{
+    border-top: 1px solid #ccc;
+}
+
+.settings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.settings ul{
+    display: flex;
+}
+
+.settings ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0 4px;
+    height: 40px;
+    width: 40px;
+    color: #00a822;
+    border-radius: 50%;
+    border: 2px solid #00a822;
+    cursor: pointer;
+}
+
+.settings button{
+    color: #fff;
+    padding: 13px 22px;
+    background: #00a822;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.loading{
+    opacity: 0.7;
+    pointer-events: none;
+}
