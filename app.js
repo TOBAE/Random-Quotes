@@ -12,7 +12,6 @@ const randomQuote = () => {
     btn.innerText = 'Loading quote....';
 
      fetch('http://api.quotable.io/random').then(res => res.json()).then(result =>{
-        console.log(result)
         quote.innerText = result.content;
         author.innerText = result.author;
         btn.innerText = 'New Quote';
@@ -21,8 +20,19 @@ const randomQuote = () => {
 }
 
 sound.addEventListener('click', () =>{
-   let utterance = new SpeechSynthesisUtterance();
-})
+   let utterance = new SpeechSynthesisUtterance(`${quote.innerText} by ${author.innerText}` );
+   speechSynthesis.speak(utterance);
+});
+
+copy.addEventListener('click', () =>{
+   navigator.clipboard.writeText(quote.innerText);
+});
+
+tweet.addEventListener('click', () =>{
+   let tweetUrl = `https://twitter.com/intent/tweet?url=${quote.innerText}`;
+   window.open(tweetUrl, '_blank');
+});
+
 
 btn.addEventListener('click', randomQuote);
 
